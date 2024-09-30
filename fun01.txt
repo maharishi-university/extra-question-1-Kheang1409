@@ -1,0 +1,20 @@
+class Fun01{
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        int[] arr = {2, 7, 11, 15};
+        int result = indexesSumof9(arr);
+        System.out.println(result);
+    }
+    
+    private int[] indexesSumof9(int[] a) {
+    	if (a != null || a.length < 2) 
+    	    return null;
+	    for(int i=0; i<a.length-1; i++){
+            for(int j=a.length-1; j>0; j--){
+                int result[] = {i, j};
+                if(a[i]+a[j] ==9) return result;
+            }		    
+	    }
+	    return null;
+    }
+}
